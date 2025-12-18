@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="random.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Random Code Generator.</h2>
+        <button class="all-quotes-btn">All Quotes</button>
+    </nav>
+
+    <h1 class="title">Let’s Start Generating Quotes</h1>
+
+    <div class="quote-container">
+        <p id="quoteText" class="quote">“Stay hungry, stay foolish.”</p>
+        <p id="authorText" class="author">- Steve Jobs</p>
+    </div>
+
+    <button class="generate-btn" onclick="generateQuote()">Generate Quote</button>
+
+    <div class="form-section">
+        <label>New Quote</label>
+        <input type="text" id="newQuote" placeholder="New Quote">
+
+        <label>Name</label>
+        <input type="text" id="newAuthor" placeholder="Name">
+
+        <button class="add-btn" onclick="addQuote()">Add Quote</button>
+    </div>
+
+<script>
+    let quotes = [
+        { quote: "Stay hungry, stay foolish.", author: "Steve Jobs" },
+        { quote: "Success is not final, failure is not fatal.", author: "Winston Churchill" },
+        { quote: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+        { quote: "Dream big and dare to fail.", author: "Norman Vaughan" },
+        { quote: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" },
+        { quote: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+        { quote: "It always seems impossible until it’s done.", author: "Nelson Mandela" },
+        { quote: "Don’t wait. The time will never be just right.", author: "Napoleon Hill" },
+        { quote: "Hardships often prepare ordinary people for an extraordinary destiny.", author: "C.S. Lewis" },
+        { quote: "Act as if what you do makes a difference. It does.", author: "William James" },
+        { quote: "What you get by achieving your goals is not as important as what you become.", author: "Zig Ziglar" },
+        { quote: "Happiness depends upon ourselves.", author: "Aristotle" },
+        { quote: "Turn your wounds into wisdom.", author: "Oprah Winfrey" }
+    ];
+
+    function generateQuote() {
+        let random = Math.floor(Math.random() * quotes.length);
+''
+        document.getElementById("quoteText").innerText =
+            `"${quotes[random].quote}"`;
+
+        document.getElementById("authorText").innerText =
+            `- ${quotes[random].author}`;
+    }
+
+    function addQuote() {
+        let newQuote = document.getElementById("newQuote").value;
+        let newAuthor = document.getElementById("newAuthor").value;
+
+        if (newQuote.trim() === "" || newAuthor.trim() === "") {
+            alert("Please enter both quote and name");
+            return;
+        }
+
+        quotes.push({ quote: newQuote, author: newAuthor });
+
+        alert("Quote added successfully!");
+
+        document.getElementById("newQuote").value = "";
+        document.getElementById("newAuthor").value = "";
+    }
+</script>
+
+</body>
+</html>

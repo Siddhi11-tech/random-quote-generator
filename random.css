@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #ff7eb3, #ff65a3, #7f5af0);
+
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-quotes-btn {
+background: linear-gradient(135deg, #f6d365, #fda085, #ff6a88);
+
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.quote-container {
+    background: white;
+    width: 70%;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #ddd;
+}
+
+.quote {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.author {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #444;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.generate-btn {
+    display: block;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #f6d365, #fda085, #ff6a88);
+    padding: 12px 200px;
+    border-radius: 6px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-section {
+    width: 70%;
+    margin: 40px auto;
+}
+
+.form-section label {
+    font-weight: bold;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.add-btn {
+    width: 200px;
+    padding: 12px;
+    background: linear-gradient(135deg, #f6d365, #fda085, #ff6a88);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+}
